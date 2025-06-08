@@ -240,12 +240,18 @@
             right: 20px;
             background: none;
             border: none;
-            color: #fff;
-            font-size: 2rem;
             cursor: pointer;
             z-index: 1001;
+            width: 30px;
+            height: 30px;
         }
         
+        .hamburger img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         .mobile-menu {
             display: none;
             position: fixed;
@@ -288,7 +294,7 @@
                 grid-template-columns: 1fr;
             }
             .hero-text {
-                text-align: right;
+                text-align: left;
             }
             .phone-image {
                 display: none;
@@ -386,10 +392,10 @@
         
         if (menu.style.display === 'block') {
             menu.style.display = 'none';
-            hamburger.innerHTML = '✕';
+            hamburger.innerHTML = '<img src="images/nav1.png" alt="Menu">';
         } else {
             menu.style.display = 'block';
-            hamburger.innerHTML = '✕';
+            hamburger.innerHTML = '<img src="images/nav1.png" alt="Menu">';
         }
     }
     </script>
