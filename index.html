@@ -249,6 +249,7 @@
             z-index: 1001;
             width: 30px;
             height: 30px;
+            padding: 0;
         }
 
         .hamburger img {
@@ -380,27 +381,25 @@
         </div>
     </footer>
 
-    <button class="hamburger" onclick="toggleMenu()">✕</button>
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-                <li><a href="#episodes" onclick="toggleMenu()">Episodes</a></li>
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </ul>
-        </div>
-
+    <button class="hamburger" onclick="toggleMenu()">
+        <img src="images/nav1.png" alt="Menu">
+    </button>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#episodes" onclick="toggleMenu()">Episodes</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
     <script>
     function toggleMenu() {
         const menu = document.getElementById('mobileMenu');
-        const hamburger = document.querySelector('.hamburger');
         
         if (menu.style.display === 'block') {
             menu.style.display = 'none';
-            hamburger.innerHTML = '<img src="images/nav1.png" alt="Menu">';
         } else {
             menu.style.display = 'block';
-            hamburger.innerHTML = '<img src="images/nav1.png" alt="Menu">';
         }
     }
     </script>
